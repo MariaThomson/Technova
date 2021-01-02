@@ -1,6 +1,7 @@
 from django.contrib import admin
 
+from .models import Pywar
+
 # Register your models here.
 
-from .models import Pywar
- admin.site.register(Pywar)
+admin.site.register(Pywar)

@@ -6,6 +6,6 @@ class Pywar(models.Model):
     description = models.CharField(max_length=150, blank=False)
     registration_fees = models.IntegerField(default=0)
     expense = models.IntegerField(default=0)
-    
+
     def __str__(self):
         return self.title
