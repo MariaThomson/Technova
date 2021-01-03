@@ -11,7 +11,7 @@ def home(request):
     registrations  = registration.objects.all()
     # todos  = Todo.objects.filter(date_added="")
     context = {}
-    context['registrations'] = registration
+    context['registrations'] = registrations
     return render(request,'home.html', context)
     # return HttpResponse("This is the home page")
 

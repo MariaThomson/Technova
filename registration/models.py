@@ -11,4 +11,4 @@ class registration(models.Model):
     
 
     def __str__(self):
-        return self.title
+        return self.name_of_the_participant
