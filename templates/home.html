@@ -9,7 +9,7 @@
     <h2>Registered Students</h2>
     <ol>
         {% for registration in registrations %} 
-        <li> {{ registration.title }} --> {{ registration.name_of_the_participant}} --> {{ registration.college}}</li>   
+        <li> {{ registration.event}} --> {{ registration.name_of_the_participant}} --> {{ registration.college}}</li>   
         {% endfor %}
     </ol>
 </body>

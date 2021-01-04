@@ -1,9 +1,9 @@
 from django.db import models
-
+from Pywar.models import Pywar
 # Create your models here.
 
 class registration(models.Model):
-    title = models.CharField(max_length=50, blank=False)
+    event = models.ForeignKey(Pywar,on_delete=models.CASCADE)
     name_of_the_participant = models.CharField(max_length=50, blank=False)
     college = models.CharField(max_length=50, blank=False)
     branch = models.CharField(max_length=50, blank=False)
