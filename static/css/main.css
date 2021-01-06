@@ -1,17 +1,23 @@
 h2{
+
     color: #026287;
-    text-align: center;
+    text-align: right;
     font-family: 'Bradley Hand', cursive;
-    
+    margin-top: -300px;
+    margin-right: 50px;
 }
 li{
-    color: #055467;
+    
+    color: white;
     font-family: 'Bradley Hand', cursive;
-    text-align: center;
+    text-align: right;
     font-size: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
 }
 body{
     background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/Vaporwave-Background-Gif-1920x1080-Spicesncurry.com.gif");
     background-size: 1580px 800px;
     background-repeat: no-repeat;
 }
+

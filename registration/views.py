@@ -4,14 +4,35 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import registration
-
+from .forms import RegistrationForm
 # Create your views here.
 
 def home(request):
     registrations  = registration.objects.all()
-    # todos  = Todo.objects.filter(date_added="")
     context = {}
     context['registrations'] = registrations
+
+    if request.POST:
+        form = RegistrationForm(request.POST)
+        context['form'] = form
+        if form.is_valid():
+            form.save()
+            return render(request,'home.html', context)
+        else:
+            form = RegistrationForm()
+            context['form'] = form
+    else:
+        form = RegistrationForm(
+            initial={
+                'Name': '',
+                'Event': '',
+                'College': '',
+                'Branch':'',
+                'Semester':'',
+            }
+        )
+        context['form'] = form
+    
     return render(request,'home.html', context)
     # return HttpResponse("This is the home page")
 
